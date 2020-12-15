@@ -1,0 +1,106 @@
+*{
+    transition: .5s ease-in-out;
+}
+section{
+	background-color: #191923;
+}
+.header h1{
+	color: #ddd;
+	font-weight: bold !important;
+	letter-spacing: 0.05em;
+	text-shadow: -1px 1px 2px #444444;
+}
+.header-colored{
+	position: relative;
+	border-radius: 50%;
+	color: #3e3eb7 !important;	
+}
+.header-colored:before{
+	position: absolute;
+	left: -12px;
+	top: 2px;
+	content: "";
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	background-image: linear-gradient(to left, rgba(62,62,183, 0.15),rgba(62,62,183, 0.1),rgba(62,62,183, 0.3));
+}
+.divider:before
+{
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 5%;
+	width: 90%;
+	height: 1px;
+    background-image: linear-gradient(to right, transparent, #444, transparent);
+    background-image: -moz-linear-gradient(to right,transparent, #444, transparent);
+    background-image: -webkit-linear-gradient(to right, transparent, #444, transparent);
+    background-image: -o-linear-gradient(to right, transparent, #444, transparent);
+}
+::ng-deep .mat-tab-label, ::ng-deep.mat-tab-label-active{
+    font-size: 15px !important;
+	letter-spacing: 0.05 !important;
+	min-width: 0% !important;	
+}
+.tab-label-content{
+	font-size: 15px !important;
+	padding: 0px !important;
+	margin: 0px !important;
+	width: 75% !important;
+    color: #ddd;
+    letter-spacing: 0.05 !important;
+}
+.card{
+	overflow: hidden;
+	transition: 0.5s ease-in-out;
+}
+.card-img-overlay{
+	cursor: pointer;
+	transition: 0.5s ease-in-out;
+	background-color: rgba(62,62,183, 0.5);
+	visibility: hidden;
+	opacity: 0;
+}
+.card-img-overlay i{
+	color: #eee;
+}
+.card:hover .card-img-overlay{
+	visibility: visible;
+	opacity: 1;
+}
+.card:hover .card-img{
+	transition: 0.5s ease-in-out;
+	transform: scale(1.1);
+}
+
+  mat-icon{
+	color: #eee;
+	transform: scale(1.5);
+  }
+
+h2{
+  color: #ddd;
+  font-weight: bold !important;
+  letter-spacing: 0.05em;
+  text-shadow: -1px 1px 2px #444444;
+}
+.comment-content h5{
+	color: #3e3eb7;
+	font-weight: bold;
+}
+.edit-icons i{
+	cursor:pointer;
+	color: #ddd !important;
+}
+.edit-icons .edit-icon:hover{
+	color: #3e3eb7 !important;
+	transition: 0.3s ease-in-out;
+}
+.comment-content i {
+	color: #3e3eb7;
+}
+.comment-content p{
+	color: #bbb;
+}

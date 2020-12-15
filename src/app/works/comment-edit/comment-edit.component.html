@@ -1,0 +1,43 @@
+<section class=" container skills-container py-4 pl-5 pr-4" @smoothFadeIn>
+    <form [formGroup]="form" #f="ngForm">
+        <div class=" form-group ">
+            <mat-form-field appearance="outline">
+                <mat-label>Enter Your Email</mat-label>
+                <input matInput name="email" id="email" #email formControlName="email" [(ngModel)]="commentEdited.email"
+                    class="pt-1" required>
+                <mat-error class="error"
+                    *ngIf="form.controls.email.hasError('email') && !form.controls.email.hasError('required')">
+                    Please enter a valid email address
+                </mat-error>
+                <mat-error *ngIf="form.controls.email.hasError('required')" class="error">
+                    Email is <strong>required</strong>
+                </mat-error>
+            </mat-form-field>
+        </div>
+        <div class="form-group ">
+            <mat-form-field appearance="outline">
+                <mat-label>Enter Your Comment</mat-label>
+                <input matInput id="commentText" #commentText formControlName="commentText"
+                    [(ngModel)]="commentEdited.commentText" required>
+                <mat-error *ngIf="form.controls.commentText.hasError('required')" class="error">
+                    Comment is required
+                </mat-error>
+            </mat-form-field>
+        </div>
+        <div class="w-25 d-inline" matTooltip="Fill in the required Fields" matTooltipClass="tooltip-disabled"
+            [matTooltipDisabled]="f.valid">
+            <button type="submit" mat-stroked-button class=" btn btn-comment save" (click)="save()"
+                [disabled]="f.invalid">
+                <i class="fa fa-floppy-o fa-lg d-inline" aria-hidden="true"></i>
+                <h4 class="d-inline pl-2">Save</h4>
+            </button>
+        </div>
+        <button type="submit" mat-stroked-button class=" btn btn-comment cancel d-inline ml-2 "
+        (click)="deleteComment()">
+            <!-- <i class="fa fa-ban fa-lg d-inline" aria-hidden="true"></i> -->
+            <i class="fa fa-trash-o d-inline" aria-hidden="true"></i>
+            <h4 class="d-inline pl-2">Delete</h4>
+        </button>
+
+    </form>
+</section>

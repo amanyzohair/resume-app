@@ -1,0 +1,15 @@
+
+.close-btn{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+::ng-deep mat-dialog-container{
+    padding: 0px !important;
+    margin: 0px !important;
+    background-color: transparent !important;
+}
+::ng-deep .music-dialog{
+    margin: 0px !important;
+    padding: 0px !important;
+}

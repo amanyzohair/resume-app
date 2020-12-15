@@ -1,0 +1,107 @@
+agm-map{
+    width: 98%;
+    height: 300px;
+}
+.contact-container{
+    background-color: #191923;
+}
+.header h1{
+	color: #ddd;
+	font-weight: bold !important;
+	letter-spacing: 0.05em;
+	text-shadow: -1px 1px 2px #444444;
+}
+.header-colored{
+	position: relative;
+	border-radius: 50%;
+	color: #3e3eb7 !important;	
+}
+.header-colored:before{
+	position: absolute;
+	left: -12px;
+	top: 2px;
+	content: "";
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	background-image: linear-gradient(to left, rgba(62,62,183, 0.15),rgba(62,62,183, 0.1),rgba(62,62,183, 0.3));
+}
+.divider:before
+{
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 5%;
+	width: 90%;
+	height: 1px;
+    background-image: linear-gradient(to right, transparent, #444, transparent);
+    background-image: -moz-linear-gradient(to right,transparent, #444, transparent);
+    background-image: -webkit-linear-gradient(to right, transparent, #444, transparent);
+    background-image: -o-linear-gradient(to right, transparent, #444, transparent);
+}
+i{
+	color: #3e3eb7;
+}
+h4{
+	color: #bbb;
+}
+
+  .form-cont {
+      width: 70%;
+      background-color: rgba(255, 255, 255, 0.2);
+      border-radius: 10px;
+    }
+  mat-label {
+      color: #ccc;
+      font-size: 15px;
+    }
+    /* Change label color on focused */
+  ::ng-deep .mat-form-field.mat-focused mat-label {
+      color: #3e3eb7 !important;
+    }  
+  ::ng-deep .mat-form-field input{
+      color: #bbb !important;
+    }  
+  ::ng-deep.mat-form-field-underline{
+      background-color: #3e3eb7 !important;
+    }
+    /* underline border color on focused */
+  ::ng-deep .mat-focused .mat-form-field-underline .mat-form-field-ripple{
+      background-color: #eee !important;
+    }
+    mat-form-field input{
+        color: #ccc;
+    }
+    mat-icon{
+      color: #eee;
+      transform: scale(1.5);
+    }
+  .error{
+    font-size: 13px;
+    color: #CA0000;
+  }
+  .btn-message{
+    border: 1px solid #3e3eb7;
+    color: #bbb !important;
+    font-weight: 500;
+  }
+  .btn-message:hover{
+    background-color: rgba(170,170,170, 0.2);
+    transition: 0.3s ease-in;
+  }
+h2{
+	color: #ddd;
+	font-weight: bold !important;
+	letter-spacing: 0.05em;
+    text-shadow: -1px 1px 2px #444444;
+}
+::ng-deep .tooltip-red{
+  left: 0px !important;
+  right: 0px !important;
+  top: 0px !important;
+  bottom: 0px !important;
+  font-size: 12px;
+  background-color: #b71c1c;
+  padding: 0px 5px;
+}

@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "resume-project-293521": {
+      "hosting": {
+        "Resume-app": [
+          "resume-project-293521"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "resume-project-293521"
+  }
+}

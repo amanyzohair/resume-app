@@ -1,0 +1,24 @@
+iframe{
+    width: 640px;
+    height: 360px;
+}
+.close-btn{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+::ng-deep mat-dialog-container{
+    padding: 0px !important;
+    margin: 0px !important;
+    background-color: transparent !important;
+}
+::ng-deep .video-dialog{
+    margin: 0px !important;
+    padding: 0px !important;
+}
+@media screen and (max-width: 900px){
+    iframe{
+        width: auto;
+        height: auto;
+    }
+}

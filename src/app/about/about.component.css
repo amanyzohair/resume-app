@@ -1,0 +1,149 @@
+.about-container{
+	background-color: #191923;
+}
+.header h1{
+	color: #ddd;
+	font-weight: bold !important;
+	letter-spacing: 0.05em;
+	text-shadow: -1px 1px 2px #444444;
+}
+.header-colored{
+	position: relative;
+	border-radius: 50%;
+	color: #3e3eb7 !important;
+	
+}
+.header-colored:before{
+	position: absolute;
+	left: -12px;
+	top: 2px;
+	content: "";
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	background-image: linear-gradient(to left, rgba(62,62,183, 0.15),rgba(62,62,183, 0.1),rgba(62,62,183, 0.3));
+}
+.specs{
+	font-weight: 500;
+	letter-spacing: 0.03em;
+	line-height: 1.5em;
+}
+h2{
+	color: #bbb;
+}
+.slash:after{
+	position: absolute;
+	content: "\002F";
+	font-size: 25px;
+	color: #3e3eb7;
+	bottom: -3px;
+	right: -4px;
+}
+.divider:before
+{
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 5%;
+	width: 90%;
+	height: 1px;
+    background-image: linear-gradient(to right, transparent, #444, transparent);
+    background-image: -moz-linear-gradient(to right,transparent, #444, transparent);
+    background-image: -webkit-linear-gradient(to right, transparent, #444, transparent);
+    background-image: -o-linear-gradient(to right, transparent, #444, transparent);
+}
+i{
+	color: #3e3eb7;
+}
+.row-divider:before
+{
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 0;
+	right: 5%;
+	width: 90%;
+	height: 1px;
+    background-image: linear-gradient(to right, transparent, #444, transparent);
+    background-image: -moz-linear-gradient(to right,transparent, #444, transparent);
+    background-image: -webkit-linear-gradient(to right, transparent, #444, transparent);
+    background-image: -o-linear-gradient(to right, transparent, #444, transparent);
+}
+.row-divider:after
+{
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 49%;
+	width: 1px;
+	height: 90%;
+    background-image: linear-gradient(to top, transparent, #444, transparent);
+    background-image: -moz-linear-gradient(to top, transparent, #444, transparent);
+    background-image: -webkit-linear-gradient(to top, transparent, #444, transparent);
+    background-image: -o-linear-gradient(to top, transparent, #444, transparent);
+}
+.pricing h1{
+	color: #ddd;
+	font-weight: 500;
+	letter-spacing: 0.05;
+}
+.pricing h3{
+	color: #aaa;
+	font-weight: 500;
+}
+.decoration{
+	text-decoration: line-through;
+}
+.price{
+	color: #3e3eb7 !important ;
+	transform: scaleY(1.15);
+	font-size: 60px;
+	font-weight: 500;
+}
+.price:after{
+	position: absolute;
+	content: "\002F hour";
+	font-size: 25px;
+	color: #999;
+	top: 50%;
+	right: 12%;
+}
+.price:before{
+	position: absolute;
+	content: "$";
+	font-size: 25px;
+	font-weight: bold;
+	color: #999;
+	top: -50%;
+	bottom: 0;
+	left: 30%;
+}
+.btn-buy{
+	outline: 2px solid #3e3eb7 !important;
+	color: #3e3eb7;
+	padding: 2px 6px;
+	background-color: transparent;
+	border-radius: 0px !important;
+}
+.btn-buy:hover{
+	background-color: #3e3eb7;
+	color: #bbb;
+}
+::ng-deep .tooltip-grey{
+	background-color: #555555 !important;
+	font-size: 11.5px;
+}
+.clients img{
+	width: 20%;
+}
+.carousel-img{
+	border-radius: 50%;
+}
+@media screen and (max-width: 575px){
+	.row-divider:after, .row-divider:before{
+		width: 0px;
+		height: 0px;
+		visibility: hidden;
+	}
+}

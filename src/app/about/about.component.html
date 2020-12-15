@@ -1,0 +1,98 @@
+<div class=" container about-container py-4 pl-5 pr-4" @slide >
+    <div class="header pb-4 ">
+        <h1 class="d-inline  header-colored " >About </h1>
+        <h1 class="d-inline " >Me</h1>
+    </div>
+    <div class="d-inline " >
+        <h2 class="d-inline position-relative px-3 slash" >25 Years</h2>
+        <h2 class="d-inline position-relative px-3 slash">California</h2>
+        <h2 class="d-inline position-relative px-3">Freelance</h2>
+    </div>
+
+<p class=" my-4 specs text-muted " >
+    I am Ryan Adlard, web designer from USA, California. full stack web developer with a passion for metrics and beating former "best-yets." Prototyped 25 new product features per year for Flexor, Inc. Decreased rework by 22% and costs by 15%. Consistently receive high user experience scores for all web development projects
+</p>
+<div class="divider position-relative"></div>
+<div class="header py-4 ">
+    <h1 class="d-inline  header-colored " >My </h1>
+    <h1 class="d-inline " >Services</h1>
+</div>
+<div class="row row-divider position-relative">
+    <div class="col-sm-6 py-3">
+        <i class="fa fa-code fa-3x mb-2" aria-hidden="true"></i>
+        <h2>Web Development</h2>
+        <p class=" mt-2 specs text-muted " >
+            Modern and mobile-ready website that will help you reach all of your marketing.
+        </p>
+    </div>
+    <div class="col-sm-6 py-3">
+        <i class="fa fa-music fa-3x mb-2" aria-hidden="true"></i>
+        <h2>Music Writing</h2>
+        <p class=" mt-2 specs text-muted " >Music copying, writing, creating, transcription, arranging and composition services.</p>
+    </div>
+    <div class=""></div>
+    <div class="col-sm-6 py-3">
+        <i class="fa fa-audio-description fa-3x mb-2" aria-hidden="true"></i>
+        <h2>Advetising</h2>
+        <p class=" mt-2 specs text-muted " >
+            Advertising services include television, radio, print, mail, and web apps.
+        </p>
+    </div>
+    <div class="col-sm-6 py-3">
+        <i class="fa fa-gamepad fa-3x mb-2" aria-hidden="true"></i>
+        <h2>Game Development</h2>
+        <p class=" mt-2 specs text-muted " >
+            Developing memorable and unique mobile android, ios and video games.
+        </p>
+    </div>
+</div>
+<div class="divider position-relative"></div>
+<div class="pb-4 row">
+    <div class="col-sm-6 text-center pricing py-4">
+        <h1 class="py-3">Basic</h1>
+        <h1 class=" position-relative price " >29</h1>
+        <h3 class="mt-5" >Web Development</h3>
+        <h3>Advetising</h3>
+        <h3>Game Development</h3>
+        <h3 class="decoration" >Music Writing</h3>
+        <h3 class="decoration">Photography</h3>
+        <button class="btn btn-buy mt-4"
+        matTooltip="Subscribe to choose the plan"
+        matTooltipClass="tooltip-grey"
+        routerLink="/contact"
+        > Choose Plan </button>
+    </div>
+    <div class="col-sm-6 text-center pricing py-4">
+        <h1 class="py-3">Pro</h1>
+        <h1 class=" position-relative price " >39</h1>
+        <h3 class="mt-5" >Web Development</h3>
+        <h3>Advetising</h3>
+        <h3>Game Development</h3>
+        <h3 >Music Writing</h3>
+        <h3 >Photography</h3>
+        <button class="btn btn-buy mt-4"
+        matTooltip="Subscribe to choose the plan"
+        matTooltipClass="tooltip-grey"
+        routerLink="/contact"
+        > Choose Plan </button>
+    </div>
+</div>
+<div class="divider position-relative"></div>
+<div class="header py-4 ">
+    <h1 class="d-inline  header-colored " >T</h1>
+    <h1 class="d-inline " >estimonials</h1>
+</div>
+    <div class="container w-75" >
+    <owl-carousel-o [options]="customOptions"  >
+        <ng-template carouselSlide *ngFor="let carousel of carousel$ | async" >
+            <div class="text-center ">
+                <p class="text-muted my-auto" >{{carousel.topic}}
+                     </p>
+                     <div class="text-center d-flex mt-4" >
+                        <img src="{{carousel.imgUrl}}" alt="" class="carousel-img w-25 mx-auto" >
+                     </div>
+            </div>
+        </ng-template>
+    </owl-carousel-o>
+</div>
+</div>

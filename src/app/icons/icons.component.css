@@ -1,0 +1,12 @@
+*{
+    transition: .1s ease-in-out;
+}
+ul li a {
+    color: #bbb;
+}
+ul li:hover a{
+    color: #3E3EB7;
+}
+.matTooltip{
+    font-size: 18px;
+}

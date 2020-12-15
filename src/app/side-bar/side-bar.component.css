@@ -1,0 +1,53 @@
+*{
+    transition: .1s ease-in-out;
+}
+.header-colored{
+    color: #3e3eb7 !important;
+    font-weight: bold;
+}
+.below-nav-items{
+    background-color: #191923;
+    border-radius: 5px;
+}
+.nav-link:hover{
+    color: #3E3EB7;
+}
+.nav-link{
+    cursor: pointer !important;
+    text-transform: uppercase;
+    color: #bbb;
+    font-weight: 500;
+}
+.divider{
+    position: relative;
+}
+.divider:after{
+    position: absolute;
+    content: "";
+    left: 5%;
+    right: 5%;
+    width: 90%;
+    height: 1px;
+    background-image: linear-gradient(to right, #444, #444, transparent);
+    background-image: -moz-linear-gradient(to right, #444, #444, transparent);
+    background-image: -webkit-linear-gradient(to right, #444, #444, transparent);
+    background-image: -o-linear-gradient(to right, #444, #444, transparent);
+}
+.badge-div{
+    width: 90%;
+}
+::ng-deep .expansion-panel{
+    background-color: rgba(255,255,255, 0.1);
+    color: #bbb;
+}
+::ng-deep .expansion-panel-header{
+    background-color: rgba(255,255,255, 0.2);
+    color: #bbb;
+}
+::ng-deep .expansion-panel-title{
+    color: #ddd;
+    text-transform: uppercase;
+}
+.comment-icon{
+    color: #3E3EB7;
+}

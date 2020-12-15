@@ -1,0 +1,25 @@
+
+.close-btn{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+} 
+.main-container{
+    background-color: #31313A;
+    min-height: 100vh;
+}
+::ng-deep .main-container{
+    padding: 0px !important;
+    width: 70%;
+}
+.social{
+    padding: 0px !important;
+    width: 90%;
+    color: #ccc ;
+    background-color: #31313A; 
+}
+::ng-deep mat-dialog-container{
+    padding: 0px !important;
+    margin: 0px !important;
+    background-color: transparent !important;
+}

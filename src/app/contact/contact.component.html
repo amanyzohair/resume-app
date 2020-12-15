@@ -1,0 +1,131 @@
+<div class=" container contact-container py-4 pl-5 pr-4" @slide>
+    <!-- Header -->
+    <div class="header pb-4 ">
+        <h1 class="d-inline  header-colored ">Get </h1>
+        <h1 class="d-inline ">in Touch</h1>
+    </div>
+    <!-- divider -->
+    <div class="divider position-relative "></div>
+    <!-- Map -->
+    <div class=" w-100 d-flex justify-content-center pt-4">
+        <agm-map [latitude]="lat" [longitude]="lng">
+            <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+        </agm-map>
+    </div>
+
+    <div class="row">
+        <div class="col py-4 pl-4">
+            <div class="py-2">
+                <i class="fa fa-map-marker fa-lg d-inline " aria-hidden="true"></i>
+                <h4 class="d-inline pl-2">38, Hadayek El-Maadi, Cairo</h4>
+            </div>
+            <div class="py-2">
+                <i class="fa fa-phone fa-lg d-inline " aria-hidden="true"></i>
+                <h4 class="d-inline pl-2">01023670407</h4>
+            </div>
+        </div>
+        <div class="col py-4 pl-4">
+            <div class="py-2">
+                <i class="fa fa-envelope fa-lg d-inline " aria-hidden="true"></i>
+                <h4 class="d-inline pl-2">amanyzohair224@gmail.com</h4>
+            </div>
+            <div class="py-2">
+                <i class="fa fa-phone fa-lg d-inline " aria-hidden="true"></i>
+                <h4 class="d-inline pl-2">01113209065</h4>
+            </div>
+        </div>
+    </div>
+    <!-- contact form -->
+    <div [ngSwitch]="defaultValue">
+        <div *ngSwitchCase="'messageForm'" >
+            <div class="header pb-4 ">
+                <h1 class="d-inline  header-colored ">Contact </h1>
+                <h1 class="d-inline ">Form</h1>
+            </div>
+            <!-- divider -->
+            <div class="divider position-relative "></div>
+
+            <div class="row w-100 py-4 d-flex justify-content-center">
+                <form [formGroup]="form" class="mx-auto" #f="ngForm">
+                    <div class=" form-row " cellspacing="0">
+                        <div class="form-group col ">
+                            <mat-form-field class="w-100 ">
+                                <mat-label>Enter First name</mat-label>
+                                <input matInput class="pt-1">
+                            </mat-form-field>
+                        </div>
+                        <div class="form-group col ">
+                            <mat-form-field class="w-100 ">
+                                <mat-label>Enter Last Name</mat-label>
+                                <input matInput class="pt-1">
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <div class=" form-row" cellspacing="0">
+                        <div class=" form-group col ">
+                            <mat-form-field class="w-100 ">
+                                <mat-label>Enter Your Email</mat-label>
+                                <input matInput
+                                name="email"
+                                ngModel
+                                formControlName="emailFormControl"
+                                placeholder="Ex. pat@example.com"
+                                class="pt-1"
+                                required >
+                                <mat-error class="error"
+                                    *ngIf="form.controls.emailFormControl.hasError('email') && !form.controls.emailFormControl.hasError('required')">
+                                    Please enter a valid email address
+                                </mat-error>
+                                <mat-error *ngIf="form.controls.emailFormControl.hasError('required')" class="error">
+                                    Email is <strong>required</strong>
+                                </mat-error>
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <div class=" form-row" cellspacing="0">
+                        <div class="form-group col ">
+                            <mat-form-field class="w-100 ">
+                                <mat-label>Enter Your Message</mat-label>
+                                <input matInput #message
+                                formControlName="messageFormControl"
+                                required>
+                                <mat-error *ngIf="form.controls.messageFormControl.hasError('required')" class="error" >
+                                    Enter Your Message
+                                </mat-error>
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <div class="form-row py-3 px-1">
+                    <div 
+                    matTooltip="Fill in the required Fields to enable the button"
+                    matTooltipClass="tooltip-red"
+                    [matTooltipDisabled]="form.valid">
+                        <button
+                        type="submit"
+                        mat-stroked-button
+                        [disabled]="form.invalid"
+                        class=" btn btn-message py-1 position-relative"
+                        (click)="sendMsessage('messageBlock')">
+                            <i class="fa fa-paper-plane-o fa-lg d-inline" aria-hidden="true"></i>
+                            <h4 class="d-inline pl-2">Send the Message</h4>
+                        </button>
+                    </div>
+                </div>
+                </form>
+            </div>
+        </div>
+        <div *ngSwitchCase="'messageBlock'" [@fadeIn]>
+            <div class=" py-4">
+                <div class="header pb-4 text-center">
+                    <h1 class="d-inline  header-colored ">Thank </h1>
+                    <h1 class="d-inline ">you</h1>
+                </div>
+            <div class="divider position-relative pb-3 "></div>
+                <h4 class=" m-0">
+                    Your message was sent successfuly, <br>we will contact you soon
+                </h4>
+            </div>
+        </div>
+    </div>
+    <subscribe></subscribe>
+</div>

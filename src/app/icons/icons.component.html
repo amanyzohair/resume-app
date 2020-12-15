@@ -1,0 +1,9 @@
+<ul class="list-unstyled d-inline" *ngFor="let icon of icons$| async">
+    <li class="d-inline px-2 "
+    [matTooltip]="icon.tooltip"
+    matTooltipPosition="below">
+        <a href="{{icon.href}}" target="_blank" >
+            <i class="fa fa-lg " class="{{icon.icon}}" aria-hidden="true"></i>
+        </a>
+    </li>
+</ul>

@@ -1,0 +1,143 @@
+ <section class=" container skills-container py-4 pl-5 pr-4" @slide>
+    <div class="header pb-4 ">
+      <h1 class="d-inline  header-colored ">Recent </h1>
+      <h1 class="d-inline ">Works</h1>
+    </div>
+    <div class="divider position-relative pb-4 "></div>
+
+    <mat-tab-group mat-align-tabs="center" dynamicHeight>
+      <mat-tab>
+        <ng-template mat-tab-label class="tab-label m-0 p-0 " >
+          <p class="tab-label-content p-0 m-0" >All</p>
+        </ng-template>
+        <div class="row flex-row " *ngFor="let g of gallery; let i=index">
+          <div class="col-6 flex-column">
+            <div class="row-cols-1 flex-row py-2 " >
+                  <div class="card "  (click)="openGalleryDialog()" >
+                    <img src="{{g.galleryImg}}" alt="" class="card-img" >
+                    <div class="card-img-overlay d-flex " >
+                      <i class="fa fa-file-image-o fa-2x my-auto mx-auto" aria-hidden="true"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="row-cols-1 flex-row py-2 " >
+                  <div class="card "  (click)="openSocialDialog()" >
+                    <img src="{{social[i].socialImg}}" alt="" class="card-img" >
+                    <div class="card-img-overlay d-flex " >
+                      <i class="fa fa-laptop fa-2x my-auto mx-auto" aria-hidden="true"></i>
+                    </div>
+                  </div>
+                </div>
+          </div>
+              <div class="col-6 flex-column " >
+                <div class=" row-cols-1 flex-row py-2">
+                  <div class="card "  (click)="openMusicDialog()" >
+                    <img src="{{music[i].musicImg}}" alt="" class="card-img" >
+                    <div class="card-img-overlay d-flex " >
+                      <i class="fa fa-music fa-2x my-auto mx-auto" aria-hidden="true"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="row-cols-1 flex-row py-2">
+                  <div class="card "  (click)="openVideoDialog()" >
+                    <img src="{{videos[i].videoImg}}" alt="" class="card-img" >
+                    <div class="card-img-overlay d-flex " >
+                      <i class="fa fa-file-video-o fa-2x my-auto mx-auto" aria-hidden="true"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </div>
+      </mat-tab>
+      <mat-tab>
+        <ng-template mat-tab-label class="tab-label m-0 p-0 ">
+          <p class="tab-label-content m-0 p-0" >Gallery</p>
+        </ng-template>
+        <div class="row flex-row py-2" >
+          <div class="col-6 " *ngFor="let g of gallery">
+                  <div class="card " (click)="openGalleryDialog()" >
+                    <img src="{{g.galleryImg}}" alt="" class="card-img" >
+                    <div class="card-img-overlay d-flex " >
+                      <i class="fa fa-file-image-o fa-2x my-auto mx-auto" aria-hidden="true"></i>
+                    </div>
+                  </div>
+          </div>
+        </div>
+      </mat-tab>
+    
+      <mat-tab>
+        <ng-template mat-tab-label class="tab-label m-0 p-0 ">
+          <p class="tab-label-content m-0 p-0" >Video</p>
+        </ng-template>
+        <div class="row flex-row py-2" >
+          <div class="col-6 " *ngFor="let v of videos">
+                  <div class="card " (click)="openVideoDialog()" >
+                    <img src="{{v.videoImg}}" alt="" class="card-img" >
+                    <div class="card-img-overlay d-flex " >
+                      <i class="fa fa-file-video-o fa-2x my-auto mx-auto" aria-hidden="true"></i>
+                    </div>
+                  </div>
+          </div>
+        </div>
+      </mat-tab>
+      <mat-tab>
+        <ng-template mat-tab-label class="tab-label m-0 p-0 ">
+          <p class="tab-label-content m-0 p-0" >Music</p>
+        </ng-template>
+        <div class="row flex-row py-2" >
+          <div class="col-6 " *ngFor="let m of music">
+            <div class="card " (click)="openMusicDialog()" >
+              <img src="{{m.musicImg}}" alt="" class="card-img" >
+              <div class="card-img-overlay d-flex " >
+                <i class="fa fa-music fa-2x my-auto mx-auto" aria-hidden="true"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </mat-tab>
+      <mat-tab>
+        <ng-template mat-tab-label class="tab-label m-0 p-0 ">
+          <p class="tab-label-content m-0 p-0" >Social</p>
+        </ng-template>
+        <div class="row flex-row py-2" >
+          <div class="col-6 " *ngFor="let s of social">
+            <div class="card " (click)="openSocialDialog()" >
+              <img src="{{s.socialImg}}" alt="" class="card-img" >
+              <div class="card-img-overlay d-flex " >
+                <i class="fa fa-laptop fa-2x my-auto mx-auto" aria-hidden="true"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </mat-tab>
+    </mat-tab-group>
+    <!-- Comment Form -->
+      <div class="header py-4 ">
+          <h1 class="d-inline  header-colored ">C</h1>
+          <h1 class="d-inline ">omments</h1>
+      </div>
+      <!-- divider -->
+      <div class="divider position-relative pt-4"></div>
+      
+      <div class=" comment-content pt-2 pb-1" *ngFor="let comment of comments$ | async" @smoothFadeIn>
+        <h5>
+          {{comment.payload.val().email}}
+        </h5>
+        <p class="m-0">
+          <i class="fa fa-comment-o fa-lg px-1 m-0" aria-hidden="true"></i>
+          {{comment.payload.val().commentText}}
+        </p>
+        <div class="edit-icons w-50 text-center pt-2">
+        <i class="fa fa-pencil-square-o edit-icon " aria-hidden="true"
+        matTooltip="Edit"
+        [routerLink]="['/works/commentEdit',comment.key]"
+        ></i>
+        </div>
+      </div>
+    
+    </section>
+    <div class="divider position-relative "></div>
+      <!-- comment form -->
+      <div class=" w-100 ">
+          <comment-form></comment-form>
+      </div>

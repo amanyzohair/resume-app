@@ -1,0 +1,15 @@
+<div>
+    <h2 class="d-inline header-colored pl-3 " >Archives</h2>
+    <div *ngFor="let blog of blogs$ | async" class="pt-2" >
+        <ul class="nav below-nav-items w-100">
+            <li mat-list-item
+            class=" nav-item w-100 divider">
+            <a 
+            class="nav-link "
+            (click)="viewBlog(blog.key)">
+            {{blog.payload.val().month}}
+        </a>
+            </li>
+        </ul>
+    </div>
+</div>

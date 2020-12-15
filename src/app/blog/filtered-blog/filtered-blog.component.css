@@ -1,0 +1,41 @@
+i{
+	color: #3E3EB7;
+	cursor: pointer;
+}
+i:hover{
+	transform: scale(1.2);
+}
+.card{
+    background-color: #191923;
+    padding: 0px !important;
+    border: 0px !important;
+	overflow: hidden;
+}
+.card-img-overlay{
+    cursor: pointer;
+    border: 0px !important;
+	transition: 0.5s ease-in-out;
+	background-color: rgba(62,62,183, 0.2);
+	visibility: hidden;
+    opacity: 0;
+}
+.blog-card-title{
+	transition: 0.5s ease-in-out;
+    cursor: pointer;
+    color: #bbb;
+    font-weight: 500;
+}
+.blog-col:hover .blog-card-title{
+    color: #3e3eb7;
+}
+.date{
+	width: 120px;
+	border: 2px solid #3e3eb7 !important;
+	color: #3e3eb7;
+	/* padding: 2px; */
+	background-color: transparent;
+	border-radius: 5px !important;
+}
+h4{
+	color: #bbb;
+}

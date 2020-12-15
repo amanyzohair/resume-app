@@ -1,0 +1,27 @@
+<div class="pt-4 pb-3">
+    <h2 class="d-inline header-colored pl-3 ">Recent Comments</h2>
+    <div class="pt-4 pb-3 ">
+        <div *ngFor="let barComments of barComments$ | async" class="d-flex w-100 mt-2">
+            <div class="badge-div mx-auto" matBadge="{{barComments.num}}" [matBadgeHidden]="hidden">
+                <mat-expansion-panel hideToggle class="expansion-panel">
+                    <mat-expansion-panel-header class="expansion-panel-header">
+                        <mat-panel-title class="expansion-panel-title">
+                            {{barComments.name}}
+                        </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <p class="pt-3">
+                        <i class="mr-1 comment-icon" [class]="barComments.icons.icon1"
+                            aria-hidden="true"></i>{{barComments.comment.comment1}}
+                    </p>
+                    <div *ngIf="barComments.comment.comment2">
+                        <div class="divider"></div>
+                        <p class="pt-2">
+                            <i class="mr-1 comment-icon" [class]="barComments.icons.icon2"
+                                aria-hidden="true"></i>{{barComments.comment.comment2}}
+                        </p>
+                    </div>
+                </mat-expansion-panel>
+            </div>
+        </div>
+    </div>
+</div>

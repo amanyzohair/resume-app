@@ -1,0 +1,46 @@
+<div class=" container blog-container pt-4 pl-5 pr-4" @slide #blogContent  >
+    <!-- Header -->
+    <div class="header pb-4 ">
+        <h1 class="d-inline  header-colored ">B</h1>
+        <h1 class="d-inline ">log</h1>
+    </div>
+    <!-- divider -->
+    <div class="divider position-relative "></div>
+    <div class="row pt-5"  >
+        <div class="col-sm-6 d-flex justify-content-center blog-col"
+        *ngFor="let blog of blogs$ | async | slice:pageSize | slice:0 :itemsPerPage ">
+            <div class="text-center blog-item mb-3" [routerLink]="(['/blog/filterd-blog', blog.key])">
+                <div class="card">
+                    <img src="{{blog.payload.val().imgUrl}}" class="card-img" alt="blog1">
+                    <div class="card-img-overlay d-flex">
+                        <i class="fa fa-file-text-o fa-2x my-auto mx-auto" aria-hidden="true"></i>
+                    </div>
+                </div>
+                <div class="card-body text-center">
+                    <p class="date text-center mx-auto">
+                        {{blog.payload.val().date}}
+                    </p>
+                    <h3 class="blog-card-title">By spite about do of allow</h3>
+                    <h4 class="bold text-muted">
+                        Ex audire suavitate has, ei quodsi tacimates sapientem sed, pri zril ubique ut. Te cule tation
+                        munere noluisse. Enim torquatos…
+                    </h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class=" p-0 m-0 rounded">
+        <div class=" ">
+            <ngb-pagination
+            class="d-flex justify-content-center"
+            [collectionSize]="6"
+            #numPages
+            [pageSize]="itemsPerPage" 
+            [(page)]="currentPage"
+            (pageChange)="onPageChange(currentPage)">
+            </ngb-pagination>
+        </div>
+    <div class=""></div>
+        <pre><span class="float-md-left">Page: {{ currentPage }} / {{numPages.pageCount}}</span><span class="float-md-right">Found items: {{ itemsPerPage }} / 6</span></pre>
+    </div>
+</div>

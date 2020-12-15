@@ -1,0 +1,107 @@
+.skills-container{
+	background-color: #191923;
+}
+.header h1{
+	color: #ddd;
+	font-weight: bold !important;
+	letter-spacing: 0.05em;
+	text-shadow: -1px 1px 2px #444444;
+}
+.header-colored{
+	position: relative;
+	border-radius: 50%;
+	color: #3e3eb7 !important;
+	
+}
+.header-colored:before{
+	position: absolute;
+	left: -12px;
+	top: 2px;
+	content: "";
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	background-image: linear-gradient(to left, rgba(62,62,183, 0.15),rgba(62,62,183, 0.1),rgba(62,62,183, 0.3));
+}
+.divider:before
+{
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 5%;
+	width: 90%;
+	height: 1px;
+    background-image: linear-gradient(to right, transparent, #444, transparent);
+    background-image: -moz-linear-gradient(to right,transparent, #444, transparent);
+    background-image: -webkit-linear-gradient(to right, transparent, #444, transparent);
+    background-image: -o-linear-gradient(to right, transparent, #444, transparent);
+}
+.progress{
+    height: 5px;
+    background-color: #aaa;
+    padding: 0px !important;
+    margin: 0px !important;
+}
+.progress-bar{
+    padding: 0px !important;
+    margin: 0px !important;
+    background-color: #3e3eb7;
+}
+.progress-label{
+    font-weight: 500;
+    color: #bbb;
+}
+.col-divider:after
+{
+	content: "";
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 1px;
+	height: 95%;
+    background-image: linear-gradient(to top, transparent, #444, transparent);
+    background-image: -moz-linear-gradient(to top, transparent, #444, transparent);
+    background-image: -webkit-linear-gradient(to top, transparent, #444, transparent);
+    background-image: -o-linear-gradient(to top, transparent, #444, transparent);
+}
+h2{
+	color: #bbb;
+}
+i{
+	color: #3e3eb7;
+}
+.progress1{
+    width: 90%;
+}
+.progress2{
+    width: 80%;
+}
+.progress3{
+    width: 87%;
+}
+.progress4{
+    width: 70%;
+}
+.exp h3{
+	font-weight: 500;
+	color: #bbb;
+}
+.year{
+	width: 85px;
+	border: 2px solid #3e3eb7 !important;
+	color: #3e3eb7;
+	/* padding: 2px; */
+	background-color: transparent;
+	border-radius: 5px !important;
+}
+.exp h4{
+	color: #bbb;
+}
+@media screen and (max-width: 575px){
+	.col-divider:after{
+		width: 0px;
+		height: 0px;
+		visibility: hidden;
+	}
+}

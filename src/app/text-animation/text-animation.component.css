@@ -1,0 +1,40 @@
+.main-header-wrapper{
+    height: 25px;
+    width: auto;
+    overflow: hidden;
+}
+.main-header-wrapper ul{
+    color: #3E3EB7;
+    text-shadow: -0.8px -0.8px 1px #545463;
+    height: 25px;
+    animation-name: wrapper;
+    animation-duration: 6s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+@keyframes wrapper{
+    0%{
+        transform: translateY(35px);
+    }
+    14.286%{
+        transform: translateY(0px);
+    }
+    28.571%{
+        transform: translateY(0px);
+    }
+    42.857%{
+        transform: translateY(-36.5px);
+    }
+    57.143%{
+        transform: translateY(-36.5px);
+    }
+    71.429%{
+        transform: translateY(-70px);
+    }
+    85.715%{
+        transform: translateY(-70px);
+    }
+    100%{
+        transform: translateY(-100px);
+    }
+}

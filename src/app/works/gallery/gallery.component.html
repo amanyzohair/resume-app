@@ -1,0 +1,14 @@
+<div mat-dialog-content class="carousel-container ">
+  <div class="close-btn">
+    <button mat-icon-button color="primary" aria-label="Example icon-button with a heart icon" mat-dialog-close>
+      <mat-icon>close</mat-icon>
+    </button>
+  </div>
+  <ngb-carousel>
+    <ng-template ngbSlide *ngFor="let url of imgUrl$ | async">
+      <div class="picsum-img-wrapper">
+        <img src="{{url.imgUrl}}" alt="Random first slide" class="carousel-img">
+      </div>
+    </ng-template>
+  </ngb-carousel>
+</div>
