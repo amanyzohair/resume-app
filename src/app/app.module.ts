@@ -16,7 +16,6 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { StoreModule } from '@ngrx/store';
 import {} from 'googlemaps';
 import { environment } from 'src/environments/environment';
 import { AboutComponent } from './about/about.component';
@@ -43,6 +42,7 @@ import { MusicComponent } from './works/music/music.component';
 import { SocialComponent } from './works/social/social.component';
 import { VideoDialogComponent } from './works/video-dialog/video-dialog.component';
 import { WorksComponent } from './works/works.component';
+import { NgxHotjarModule } from 'ngx-hotjar';
 
 @NgModule({
   declarations: [
@@ -74,7 +74,6 @@ import { WorksComponent } from './works/works.component';
     NgbModule,
     MaterialModule,
     MatGridListModule,
-    StoreModule.forRoot({}, {}),
     LayoutModule,
     MatToolbarModule,
     MatButtonModule,
@@ -90,6 +89,7 @@ import { WorksComponent } from './works/works.component';
     AngularFireModule.initializeApp(environment.fireBase),
     HttpClientModule,
     AngularFireStorageModule,
+    NgxHotjarModule.forRoot('3089881'),
   ],
   providers: [
     DatabaseService,
