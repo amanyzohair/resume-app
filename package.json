@@ -22,7 +22,6 @@
     "@angular/platform-browser": "~11.2.14",
     "@angular/platform-browser-dynamic": "~11.2.14",
     "@angular/router": "~11.2.14",
-    "@ngrx/store": "^10.0.1",
     "angular-vertical-tabs": "github:SamuelMarks/angular-vertical-material-tabs",
     "bootstrap": "^4.5.2",
     "file-saver": "^2.0.2",
@@ -32,7 +31,6 @@
     "ng-bootstrap": "^1.6.3",
     "ng-dialog-animation": "^9.0.3",
     "ng2-charts": "^2.4.2",
-    "ngx-owl-carousel-o": "^4.0.0",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.2"
